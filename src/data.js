@@ -3,20 +3,20 @@ export const data = () => ([
     {
         id: 1,
         name: "Karla Newman",
-        age: 31,
-        image: "https://avatars.githubusercontent.com/u/109551323?s=400&u=60237023d93c598a664a214761b62fae53249934&v=4"
+        age: 35,
+        image: "../imgs/friend1.jpg"
     },
     {
         id: 2,
         name: "Amanda Miller",
-        age: 31,
-        image: "https://avatars.githubusercontent.com/u/109551323?s=400&u=60237023d93c598a664a214761b62fae53249934&v=4"
+        age: 23,
+        image: "../imgs/friend2.jpg"
     },
     {
         id: 3,
         name: "Zoe Reeves",
-        age: 31,
-        image: "https://avatars.githubusercontent.com/u/109551323?s=400&u=60237023d93c598a664a214761b62fae53249934&v=4"
+        age: 18,
+        image: "../imgs/friend3.jpg"
     }
 
 

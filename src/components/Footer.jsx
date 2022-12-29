@@ -1,6 +1,6 @@
 export const Footer = () => (
 
-    <footer className="text-neutral-800 text-xs pt-5">
+    <footer className="text-neutral-800 text-xs">
 
         <p>Developed by
             <a
