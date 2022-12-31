@@ -7,7 +7,6 @@ import { Modal } from './components/Modal'
 
 
 
-
 export const App = () => {
 
 
@@ -19,24 +18,17 @@ export const App = () => {
     return (`${day}/${month}/${year}`)
   }
 
-
   const [friends, setFriends] = useState(data)
   const [modalVisible, setModalVisible] = useState(false)
   const [modalName, setModalName] = useState("")
 
 
-
-
-
   return (
 
-
     <main className='flex flex-col p-2 items-center bg-red-50 h-full extraheight:h-screen '>
-      <h1 className='text-3xl extraheight:text-4xl text-neutral-800 pb-2 extraheight:pb-1 font-fjalla extraheight:mt-10'>Birthday Reminder</h1>
 
-
-
-
+      {/* title */}
+      <h1 className='text-3xl extraheight:text-4xl text-neutral-700 pb-2 extraheight:pb-1 font-fjalla extraheight:mt-7'>Birthday Reminder</h1>
 
       <div className='flex flex-col w-full h-full items-center extraheight:justify-around'>
 
@@ -46,14 +38,10 @@ export const App = () => {
           <div className='flex gap-3 text-sm pb-2'>
             <h2>{today()}</h2>
             <h3>{friends.length}
-
-              {
-                friends.length === 1 ? ' birthday ' : ' birthdays '
-              }
-
-
+              {friends.length === 1 ? ' birthday ' : ' birthdays '}
               today</h3>
           </div>
+
 
           <List
             friends={friends}
@@ -64,43 +52,33 @@ export const App = () => {
 
 
 
+          <button className='bg-neutral-700 rounded-md text-red-200 px-5 py-0 m-1'
+            onClick={
+              friends.length === 0 ?
 
-          <div>
-
-            <button className='bg-neutral-800 rounded-md text-red-200 px-3 py-1 m-1'
-              onClick={
-                friends.length === 0 ?
-
-                  () => setFriends(data)
-                  :
-                  () => setFriends([])
-              }
-            >
-              {
-                friends.length === 0 ? "show again" : "clear all"
-              }
-            </button>
-
-
-
-
-            {
-
-              (friends.length >= 1 && friends.length !== data().length) &&
-              <button className='bg-neutral-800 rounded-md text-red-200 px-3 py-1 m-1'
-                onClick={() => setFriends(data)}
-              >
-                show again
-              </button>
-
+                () => setFriends(data)
+                :
+                () => setFriends([])
             }
+          >
+            {
+              friends.length === 0 ? "show again" : "clear all"
+            }
+          </button>
 
 
 
-          </div>
+          {
+            (friends.length >= 1 && friends.length !== data.length) &&
+            <button className='text-neutral-800 text-xs'
+              onClick={() => setFriends(data)}
+            >
+              show all birthdays again
+            </button>
+          }
 
 
-
+          {/* modal for button message */}
           <Modal
             modalVisible={modalVisible}
             setModalVisible={setModalVisible}
@@ -108,13 +86,9 @@ export const App = () => {
           />
 
 
-
         </section>
         <Footer />
       </div>
-
-
     </main>
   )
-
 }

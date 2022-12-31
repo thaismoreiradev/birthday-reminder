@@ -1,5 +1,5 @@
 
-export const data = () => ([
+export const data = [
     {
         id: 1,
         name: "Karla Newman",
@@ -18,6 +18,4 @@ export const data = () => ([
         age: 18,
         image: "../imgs/friend3.jpg"
     }
-
-
-])
+]

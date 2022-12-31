@@ -1,8 +1,5 @@
 
-
-
-
-export const Modal = ({ modalVisible, setModalVisible, modalName}) => (
+export const Modal = ({ modalVisible, setModalVisible, modalName }) => (
 
     <section className=
 
@@ -13,7 +10,7 @@ export const Modal = ({ modalVisible, setModalVisible, modalName}) => (
 
 
         <p>Hi, this is a simulation.</p>
-        <p>But in real world, you would send a directly message or mail to {modalName}</p>
+        <p>But in real world, you would send a directly message or email to {modalName}</p>
 
         <button
             onClick={() => setModalVisible(false)}
@@ -21,7 +18,5 @@ export const Modal = ({ modalVisible, setModalVisible, modalName}) => (
         >
             close
         </button>
-
     </section>
-
 )
